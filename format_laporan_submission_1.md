@@ -75,7 +75,7 @@ Univariate Analysis dilakukan untuk memahami distribusi fitur numerik dan katego
 
 ### Analisis sebaran pada setiap fitur numerik
 
-![Sebaran Fitur Numerik](https://drive.google.com/uc?export=view&id=1SiRuwRZx7dDkYV9y5sIiUrEXO9ZE22gZ)
+![sebaran_numerik](https://github.com/user-attachments/assets/d2a96d35-785e-4569-8611-f7572596b766)
 
 **Gambar 1**. Chart Analisis sebaran pada setiap fitur numerik.
 
@@ -89,7 +89,8 @@ Visualisasi **Gambar 1** di atas menunjukkan histogram dari tiga fitur utama: **
 
 ### Analisis Sebaran Fitur Kategorikal
 
-![Sebaran Fitur Kategorikal](https://drive.google.com/uc?export=view&id=1J28SQHGX8jXkwlFoawukSY5-wPe-bakG)  
+![sebaran_kategorikal](https://github.com/user-attachments/assets/e7eb3ab3-e74a-4606-8d22-4e6e697e6100)
+ 
 **Gambar 2**. Chart Analisis sebaran pada setiap fitur kategorikal.
 
 Visualisasi **Gambar 2** menunjukkan countplot (jumlah kategori) untuk seluruh fitur kategorikal.
@@ -112,7 +113,8 @@ Multivariate Analysis bertujuan untuk memahami hubungan antara dua atau lebih fi
 
 ### Korelasi Antar Fitur Numerik
 
-![Korelasi Fitur Numerik](https://drive.google.com/uc?export=view&id=1o_AhZpkfISgzK9_R3ybyod9vmysJkkeS)  
+![heatmap_numerik](https://github.com/user-attachments/assets/120ec06b-a417-4061-b383-af96fb558688)
+
 **Gambar 3**. Heatmap korelasi antar fitur numerik: `Tahun`, `Jarak Tempuh`, dan `Harga`.
 
 Berdasarkan **Gambar 3**, dapat dilihat:
@@ -123,7 +125,8 @@ Berdasarkan **Gambar 3**, dapat dilihat:
 
 ### Pairplot Fitur Numerik
 
-![Pairplot Fitur Numerik](https://drive.google.com/uc?export=view&id=1k1vopjkHGCyuulpIcyPeDgC7XR6KiQsY)  
+![pairplot_numerik](https://github.com/user-attachments/assets/9996f324-b4bc-481b-b88c-27983e914f5b)
+
 **Gambar 4**. Pairplot fitur numerik: `Tahun`, `Jarak Tempuh`, dan `Harga`.
 
 Pairplot pada **Gambar 4** di atas memperlihatkan hubungan visual antara fitur numerik:
@@ -136,7 +139,8 @@ Visualisasi ini memperkuat insight numerik bahwa `Tahun` dan `Jarak Tempuh` berp
 
 ### Distribusi Harga Berdasarkan Fitur Kategorikal
 
-![Boxplot Harga Fitur Kategorikal](https://drive.google.com/uc?export=view&id=19bQVyQ04MRnnLbUrB_E1esfIRegTg1Ga)  
+![boxplot_kategorikal_harga](https://github.com/user-attachments/assets/68abcabe-f7ff-40e0-83db-a8915ae83745)
+
 **Gambar 5**. Boxplot distribusi harga berdasarkan fitur kategorikal.
 
 Visualisasi **Gambar 5** menunjukkan hubungan antara harga dan beberapa fitur kategorikal:
@@ -236,13 +240,13 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 
   Untuk meningkatkan performa model, dilakukan **Grid Search** untuk mencari kombinasi parameter terbaik. Teknik ini menggunakan validasi silang (`cv=3`) dan metrik `neg_mean_absolute_error`.
 
-  Berikut hasil tuning terbaik untuk masing-masing model:
+Berikut hasil tuning terbaik untuk masing-masing model:
 
-  | Model             | Best Parameters                                                             |
-  |------------------|------------------------------------------------------------------------------|
-  | Decision Tree     | `{'max_depth': 10, 'min_samples_split': 2}`                                  |
-  | Random Forest     | `{'n_estimators': 200, 'max_depth': 20, 'min_samples_split': 2}`             |
-  | Gradient Boosting | `{'n_estimators': 200, 'max_depth': 6, 'learning_rate': 0.1}`                |
+| Model              | Best Parameters                                                               |
+|-------------------|--------------------------------------------------------------------------------|
+| Decision Tree      | `{'max_depth': 20, 'min_samples_split': 2}`                                   |
+| Random Forest      | `{'n_estimators': 200, 'max_depth': None, 'min_samples_split': 2}`            |
+| Gradient Boosting  | `{'n_estimators': 200, 'max_depth': 10, 'learning_rate': 0.1}`                |
 
 ## Evaluation
 
@@ -271,7 +275,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 
 > Gradient Boosting memiliki **train-test gap yang kecil**, menunjukkan generalisasi yang baik.
 
-![Perbandingan MSE](https://drive.google.com/uc?export=view&id=1MuaVaaOaXTFKJrbQawhUO_jTFDLtaTEH)
+![perbandingan_mse](https://github.com/user-attachments/assets/3c5674b8-4fba-45f4-8208-9ff9f13aa7eb)
 
 **Gambar 6**. Perbandingan MSE.
 
