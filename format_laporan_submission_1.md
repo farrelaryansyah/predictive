@@ -279,6 +279,12 @@ Berikut hasil tuning terbaik untuk masing-masing model:
 
 **Gambar 6**. Perbandingan MSE.
 
+Visualisasi **Gambar 6** menampilkan perbandingan antara **Train MSE** dan **Test MSE** untuk masing-masing model:
+
+- **Random Forest** memiliki selisih MSE yang besar antara data train dan test, namun tetap menunjukkan generalisasi yang lebih baik dibandingkan model lainnya.
+- **Gradient Boosting** juga menunjukkan peningkatan MSE pada data test, tetapi performanya masih cukup stabil.
+- **Decision Tree** menunjukkan MSE test paling tinggi, menandakan adanya **overfitting** yang signifikan terhadap data latih.
+
 ### Kesimpulan Evaluasi
 
 - **Random Forest Regressor (Tuned)** memberikan performa paling konsisten dengan MAE dan R² terbaik.
